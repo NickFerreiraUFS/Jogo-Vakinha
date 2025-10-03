@@ -16,7 +16,7 @@ body{
     border: 5px solid rgb(0, 191, 41);
     border-radius: 15%;
     color: rgb(0, 0, 0);
-    font-size: medium;
+    font-size: 3vh;;
     font-family: fantasy;
     text-align: justify;
     padding: 30px; /* margem interna */
