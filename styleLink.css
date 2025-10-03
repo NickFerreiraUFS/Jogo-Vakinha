@@ -1,0 +1,45 @@
+body{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    height: 95vh;
+    width: 99vw ;
+    background-color: rgb(5, 94, 0);
+}
+
+.TextoInicial {
+    background-color: rgb(224, 224, 224);
+    width: 50vw;
+    min-height: 60vh; /* deixa o texto crescer sem cortar */
+    border: 5px solid rgb(0, 191, 41);
+    border-radius: 15%;
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    font-family: fantasy;
+    text-align: justify;
+    padding: 30px; /* margem interna */
+    box-sizing: border-box;
+    margin: 20px auto; /* centraliza horizontalmente */
+    display: block; /* importante para texto normal */
+}
+
+
+.esc{
+    width: 20vw;
+    height: 15vh;
+    border: solid, rgb(0, 200, 50), 5px;
+    border-radius: 15%;
+    background-color: rgb(228, 228, 228);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(8, 8, 8);
+    font-size: medium;
+}
+
+.image{
+    display: block;       
+    margin: 20px auto 0;  
+    max-width: 70%;       
+    height: auto;
+}
