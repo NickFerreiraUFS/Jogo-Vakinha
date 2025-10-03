@@ -1,45 +1,76 @@
-body{
-    align-items: center;
-    justify-content: center;
+/* BODY */
+body {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
-    height: 95vh;
-    width: 99vw ;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vh;
+    min-height: 100vh;
+    width: 100%;
     background-color: rgb(5, 94, 0);
+    padding: 2vh 2vw;
+    box-sizing: border-box;
 }
 
+/* TEXTO INICIAL */
 .TextoInicial {
     background-color: rgb(224, 224, 224);
-    width: 50vw;
-    min-height: 60vh; /* deixa o texto crescer sem cortar */
+    width: 90%;        /* ocupa quase toda a tela em mobile */
+    max-width: 800px;  /* não fica gigante em desktop */
+    min-height: auto;  
     border: 5px solid rgb(0, 191, 41);
     border-radius: 15%;
     color: rgb(0, 0, 0);
-    font-size: 3vh;;
+    font-size: 2.5vh;  /* relativo à altura da tela */
     font-family: fantasy;
     text-align: justify;
-    padding: 30px; /* margem interna */
+    padding: 2vh 2vw;
     box-sizing: border-box;
-    margin: 20px auto; /* centraliza horizontalmente */
-    display: block; /* importante para texto normal */
+    margin: 0 auto;
 }
 
+/* CONTAINER DE BOTÕES */
+.botao-container {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap; /* quebra linha se não couber */
+    width: 100%;
+    max-width: 800px;
+}
 
-.esc{
-    width: 20vw;
-    height: 15vh;
-    border: solid, rgb(0, 200, 50), 5px;
+/* BOTÕES */
+.esc {
+    flex: 1 1 30%; /* ocupa até 30% do container */
+    min-width: 120px; /* não fica muito pequeno */
+    padding: 2vh 0;
+    border: 5px solid rgb(0, 200, 50);
     border-radius: 15%;
     background-color: rgb(228, 228, 228);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:rgb(8, 8, 8);
-    font-size: medium;
+    color: rgb(8, 8, 8);
+    font-size: 2vh;
+    cursor: pointer;
 }
 
-.image{
-    display: block;       
-    margin: 20px auto 0;  
-    max-width: 70%;       
+/* IMAGENS */
+.image {
+    display: block;
+    margin: 2vh auto 0;
+    max-width: 90%;
     height: auto;
+}
+
+/* MEDIA QUERIES PARA CELULAR */
+@media (max-width: 600px) {
+    .TextoInicial {
+        font-size: 2vh;
+        padding: 3vw;
+    }
+
+    .esc {
+        flex: 1 1 80%; /* botões ocupam quase toda a largura no celular */
+        font-size: 2vh;
+        padding: 1.5vh 0;
+    }
 }

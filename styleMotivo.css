@@ -1,38 +1,69 @@
-body{
-    align-items: center;
-    justify-content: center;
+/* BODY */
+body {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
-    height: 95vh;
-    width: 99vw ;
-    background-color: rgb(5, 94, 0);
-}
-
-.TextoInicial{
-    display: block;
-    justify-content: center;
     align-items: center;
-    background-color: rgb(224, 224, 224);
-    height: 80vh;
-    width: 50vw;
-    border: solid,rgb(0, 191, 41), 5px;
-    border-radius: 15%;
-    color: rgb(0, 0, 0);
-    font-size: 3vh;
-    font-family: fantasy;
-    text-align:justify;
-    padding: 50px;
+    justify-content: flex-start;
+    gap: 3vh;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(5, 94, 0);
+    padding: 2vh 2vw;
     box-sizing: border-box;
 }
 
-.esc{
-    width: 20vw;
-    height: 15vh;
-    border: solid, rgb(0, 200, 50), 5px;
+/* TEXTO INICIAL */
+.TextoInicial {
+    display: block;
+    background-color: rgb(224, 224, 224);
+    width: 90%;        /* ocupa quase toda a tela em mobile */
+    max-width: 800px;  /* não fica gigante em desktop */
+    min-height: auto;
+    border: 5px solid rgb(0, 191, 41);
+    border-radius: 15%;
+    color: rgb(0, 0, 0);
+    font-size: 2.5vh;
+    font-family: fantasy;
+    text-align: justify;
+    padding: 3vh 2vw;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* CONTAINER DE BOTÕES */
+.botao-container {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap; /* quebra linha se não couber */
+    width: 100%;
+    max-width: 800px;
+}
+
+/* BOTÕES */
+.esc {
+    flex: 1 1 30%;       /* ocupa até 30% do container em desktop */
+    min-width: 120px;    /* evita botões muito pequenos */
+    padding: 2vh 0;
+    border: 5px solid rgb(0, 200, 50);
     border-radius: 15%;
     background-color: rgb(228, 228, 228);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:rgb(8, 8, 8);
-    font-size: medium;
+    color: rgb(8, 8, 8);
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES PARA CELULAR */
+@media (max-width: 600px) {
+    .TextoInicial {
+        font-size: 2vh;
+        padding: 3vw;
+    }
+
+    .esc {
+        flex: 1 1 80%; /* botões ocupam quase toda a largura no celular */
+        font-size: 2vh;
+        padding: 1.5vh 0;
+    }
 }
