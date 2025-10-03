@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 document.addEventListener("DOMContentLoaded",()=>{
     document.querySelector(".voltar").addEventListener("click",()=>{
-    window.location.href="Home.html";
+    window.location.href="index.html";
 })
 })
 
